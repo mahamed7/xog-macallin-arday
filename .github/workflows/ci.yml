@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Syntax check scripts and data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check every browser script parses
+        run: find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
+      - name: Check JSON data files are valid
+        run: find . -name '*.json' -not -path './.git/*' -print0 | xargs -0 -n1 -I{} node -e "JSON.parse(require('fs').readFileSync('{}','utf8'))"
