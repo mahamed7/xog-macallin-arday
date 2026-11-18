@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xog-Macallin-Arday - School Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-card">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Xog-Macallin-Arday</h1>
+                <p class="subtitle">School Management System</p>
+            </div>
+            
+            <div class="welcome-actions">
+                <h2>Welcome to Our School Management System</h2>
+                <p>Please choose your role to continue:</p>
+                
+                <div class="role-buttons">
+                    <a href="login.html?role=admin" class="role-btn admin-btn">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </a>
+                    <a href="login.html?role=teacher" class="role-btn teacher-btn">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Teacher</span>
+                    </a>
+                    <a href="login.html?role=student" class="role-btn student-btn">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Student</span>
+                    </a>
+                </div>
+                
+                <div class="quick-info">
+                    <p><i class="fas fa-info-circle"></i> Sample credentials available on login page</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+    <script src="script.js"></script>
+   </body>
+</html>

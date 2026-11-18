@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - WaaXog-Macallin-Arday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user-info">
+                <h2><i class="fas fa-user-graduate"></i> Student Dashboard</h2>
+                <p id="student-name">Loading...</p>
+            </div>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card full-card">
+                <h3><i class="fas fa-chart-line"></i> My Grades</h3>
+                <div class="input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-grades" placeholder="Search grades...">
+                </div>
+                <div id="my-grades-list" class="data-list"></div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h4>Total Grades</h4>
+                        <p id="total-grades" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Average Grade</h4>
+                        <p id="average-grade" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Highest Grade</h4>
+                        <p id="max-grade" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Lowest Grade</h4>
+                        <p id="min-grade" class="stat-value">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Xog-Macallin-Arday System | <a href="index.html">Home</a></p>
+        </div>
+    </div>
+
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="data.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

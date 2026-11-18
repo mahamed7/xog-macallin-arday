@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Xog-Macallin-Arday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user-info">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Teacher Dashboard</h2>
+                <p id="teacher-name">Loading...</p>
+            </div>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card">
+                <h3><i class="fas fa-edit"></i> Assign Grade</h3>
+                <div class="input-group">
+                    <select id="select-student">
+                        <option value="">Select Student...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="grade-name" placeholder="Subject Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="grade-value" min="0" max="100" placeholder="Grade (0-100)" required>
+                </div>
+                <button id="add-grade-btn" class="btn-primary">Save Grade</button>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-list-alt"></i> Assigned Grades</h3>
+                <div class="input-group">
+                    <select id="filter-grades">
+                        <option value="">All Students</option>
+                    </select>
+                </div>
+                <div id="grades-list" class="data-list"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Xog-Macallin-Arday System | <a href="index.html">Home</a></p>
+        </div>
+    </div>
+
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="data.js"></script>
+    <script src="teacher.js"></script>
+    
+</body>
+</html>

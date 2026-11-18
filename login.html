@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Xog-Macallin-Arday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Xog-Macallin-Arday</h1>
+                <p class="subtitle">School Management System</p>
+            </div>
+            
+            <div class="login-form">
+                <h2 id="login-title">Login to System</h2>
+                
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <div class="role-display">
+                    <i class="fas fa-user-tag"></i>
+                    <span id="selected-role">Admin</span>
+                </div>
+                
+                <button id="login-btn" class="btn-primary">Login</button>
+                
+                <div class="login-footer">
+                    <a href="index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                </div>
+                
+                <div class="credentials">
+                    <h3><i class="fas fa-key"></i> Sample Credentials</h3>
+                    <p><strong>Admin:</strong> admin / admin123</p>
+                    <p><strong>Teacher:</strong> macallin / macallin123</p>
+                    <p><strong>Student:</strong> arday / arday123</p>
+                    <p class="note">Select role on home page first</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="dark-mode-toggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
